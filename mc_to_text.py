@@ -8,18 +8,18 @@ morse_code_dic= {
     '.-.-.-': '.', '--..--': ',', '..--..': '?', '.----.': "'", '-.-.--': '!', '-..-.': '/', 
     '-.--.': '(', '-.--.-': ')', '.-...': '&', '---...': ':', '-.-.-.': ';', '-...-': '=', 
     '.-.-.': '+', '-....-': '-', '..--.-': '_', '.-..-.': '"', '...-..-': '$', '.--.-.': '@',
-    '  ':'  '
+    '  ':' '
 }
 
 
 def decrypt_msg(mcode):
     mstr = mcode.split('  ')
     dec_message = []
-    
     for w in mstr:
         ch = w.split()
         dec_ch = ''.join([morse_code_dic.get(c, ' ') for c in ch])
         dec_message.append(dec_ch)
+        print(dec_message)
         
     return ' '.join(dec_message)
 
